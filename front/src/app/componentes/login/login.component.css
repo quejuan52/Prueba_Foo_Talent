@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: absolute;
+}
+
+.forcontenedor {
+    background-color: #ffffff;
+    width: 35%;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-family: rome;
+    font-size: 25px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 18px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #333;
+}
+
+label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 14px;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+    padding: 0 5px;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    color: #333;
+    font-size: 12px;
+    padding: 0 5px;
+    transform: none;
+}
+
+.cuenta {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.login-link a {
+    color: #333;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

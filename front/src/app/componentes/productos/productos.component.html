@@ -1,0 +1,83 @@
+<app-menulateral></app-menulateral>
+<div class="ventana">
+    <table id="tabla" class="table table-hover">
+        <thead class="thead-dark">
+            <tr class="titulotabla" >
+                <th scope="col">Imagen</th>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Descripcion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of datos">
+                <td (click)="editarRegistro(item._id)"> <img src="{{ item.imagen }}" class="miimagen"> </td>
+                <td (click)="editarRegistro(item._id)">{{ item.codigo }}</td>
+                <td (click)="editarRegistro(item._id)">{{ item.nombre }}</td>
+                <td (click)="editarRegistro(item._id)">{{ item.categoria}}</td>
+                <td (click)="editarRegistro(item._id)">{{ item.precio }}</td>
+                <td >{{ item.descripcion }}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+    <div class="btadd">
+        <button (click)="abrirModal()" type="button" class="btn-add">
+            <a id="addenlace" routerLink="/buscar">
+                <img id="addimg" src="assets/img/add.png">
+            </a>
+        </button>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Productos</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" id="categoria" required [(ngModel)]="categoria">
+                        <option *ngFor="let item of datosCategorias" value="{{item.nombre}}">{{item.codigo}} - {{item.nombre}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="codigo">Codigo</label>
+                    <input class="form-control" type="text" id="codigo" required [(ngModel)]="codigo">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input class="form-control" type="nombre" id="nombre" required [(ngModel)]="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="imagen">Imagen</label>
+                    <input class="form-control" type="text" id="imagen" required [(ngModel)]="imagen">
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio</label>
+                    <input class="form-control" type="text" id="precio" required [(ngModel)]="precio">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <textarea class="form-control" id="descripcion" rows="3" required [(ngModel)]="descripcion"></textarea>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-dark" (click)="Guardar()"
+                    *ngIf="idseleccionado == ''">Guardar</button>
+                <button type="button" class="btn btn-dark" (click)="Actualizar()"
+                    *ngIf="idseleccionado != ''">Actualizar</button>
+                <button type="button" class="btn btn-dark" (click)="Eliminar()"
+                    *ngIf="idseleccionado != ''">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>

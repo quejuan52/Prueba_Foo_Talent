@@ -1,0 +1,32 @@
+.fondo{
+    background-image: url('https://img.freepik.com/fotos-premium/fondo-azul-mapa-mundo-palabras-tecnologia-el_445983-5146.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registro,.login{
+    margin: 25% 0px;
+    padding: 10px;
+}
+.btn-iconos{
+    background-color: transparent;
+    border:0px;
+}
+img#login {
+    width: 100px;
+}
+img#registro {
+    width: 100px;
+}
+.labellogin{
+    font-size: 30px;
+    font-family: initial;
+    color: aliceblue;
+
+}

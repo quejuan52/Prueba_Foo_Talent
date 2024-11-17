@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+.ventana {
+    margin-left: 270px; /* mismo ancho que el menú lateral */
+    padding: 20px; /* para añadir algo de espacio alrededor */
+    display: flex;
+    direction: column;
+    position: relative;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center; /* centra verticalmente si es necesario */
+    min-height: 100vh; /* al menos la altura completa de la ventana */ 
+}
+
+table {
+    border-collapse: collapse; 
+    width: 80%;
+    position: absolute;
+    top:40px;
+    text-align: justify;
+
+}
+.titulotabla{
+    text-align: center;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ add boton $$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+.btadd {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+img#addimg {
+    width: 40px;
+}
+.btn-add{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border:0px;
+}
